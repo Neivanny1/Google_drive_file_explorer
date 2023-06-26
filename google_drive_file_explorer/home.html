@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Drive</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hori.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    
+</head>
+<body>
+    <div class="header"><img style="margin-left: 10px; float:left; border-radius: 10px 10px 0px 0px;" src="./img/th.jpg" alt="">
+      Dream of Artificial  Inteligence Cloud Computing 
+        <div class="title"></div>
+        <div class="auth-buttons">
+            <button class="signin">Sign In</button>
+            <button class="signout">Sign Out</button>
+        </div>
+    </div> <br>
+      <ul class="topnav">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="./html/docs.html">DOCUMENTS</a></li>
+        <li><a href="./html/audio.html">AUDIO</a></li>
+        <li><a href="./html/photos.html">PHOTOS</a></li>
+        <li><a href="./html/videos.html">VIDOES</a></li>
+        <li class="right"><a href="./html/analysis.html">GENERAL</a></li>
+      </ul>
+    <div class="actions">
+      <div id="upper">
+              <h1>Quick Notepad For You</h1><div >
+           <!-- <h1>Upload files from: </h1> -->
+           
+          <select id="notepadOrFile">
+            <option value="notepad">Notepad</option>
+            <option value="file">Drive</option>
+          </select>
+          <textarea placeholder="Type your notes..." id="notepadText"></textarea>
+          <input class="fileInput" type="file" id="fileInput" style="display: none;
+          border: 0px;
+          padding: 8px 30px;
+          border: 2px solid rgb(224, 224, 224, 1);
+          font-family: 'Noto Sans KR', sans-serif;
+          cursor: pointer;
+          color: #3c84f8;">
+          <button class="upload" id="saveButton" onclick="upload()">Save Notes</button>
+          <button class="upload" id="backupButton" onclick="uploadFile()">Backup</button>
+        </div>
+      </div>
+      </div>
+      <div class="vertical-hr"></div>
+      <div id="center">
+        <div class="actions1">
+          <div id="upper1">
+        <h1>Check These Files</h1>
+        <div id="tv">
+          <img src="./img/" alt="">
+          <button id="btn-suggestion">CHECKOUT</button>
+          <ul>
+            <div style="text-align: center;">No suggested Files</div>
+          </ul>
+        <div >
+      </div>
+      </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <h1>Arrange Files with:
+      <select id="sort-select" onchange="showList()">
+          <option value="">--Sort by--</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="size-asc">Size (Smallest first)</option>
+          <option value="size-desc">Size (Largest first)</option>
+          <option value="modified-asc">Last Modified (Oldest first)</option>
+          <option value="modified-desc">Last Modified (Newest first)</option>
+          <option value="opened-by-me">Last Opened by Me</option>
+          <option value="modified-by-me">Last Modified by Me</option>
+          <option value="photos">Photos</option>
+          <option value="audio">Audio</option>
+          <option value="video">Video</option>
+          <option value="documents">Documents</option>
+      </select>
+        </i> 
+    </h1>
+
+
+    <div>
+        <form>
+            <i class="fas fa-search" onclick="searchFiles()"></i>
+            <input id="search-item" type="text" placeholder="Search Files">
+          </form>
+                <div class="button-container" style="display: none;">
+        <button class="button" id="btnpdf" onclick="searchPdfFiles()">PDF</button>
+        <button class="button" id="btntxt" onclick="searchTxtFiles()">TXT</button>
+        <button class="button" id="btnword" onclick="searchWordFiles()">WORD</button>
+        <button class="button" id="btnmp3" onclick="searchMp3Files()">AUDIO</button>
+        <button class="button" id="btnmp4" onclick="searchMp4Files()">VIDEO</button>
+      </div>
+          <div class="list">
+            <ul>
+              <div style="text-align: center;">You aren't logged in. Please signin </div>
+            </ul>
+          </div>          
+        <div class="expand-container" style="display: none;">
+        <ul>
+            <li onclick="readEditDownload(this, 'read')">Read</li>
+            <li onclick="readEditDownload(this, 'edit')">Edit</li>
+            <li onclick="readEditDownload(this, 'download')">Download</li>
+            <li onclick="deleteFile(this)">Delete</li>
+        </ul>
+        <div>
+
+      </div>
+
+    </div>
+    <footer style="  padding:20px;
+    margin-top:20px;
+    color:#eff7fa;
+    background-color:#78beda;
+    text-align: center;">
+      Omega Drive, Copyright &copy; 2023
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"></script>
+    <script async defer src="https://accounts.google.com/gsi/client"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</body>
+</html>
